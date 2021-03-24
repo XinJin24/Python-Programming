@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="class"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2018-03-01 11:35:50 AM"/>
+        <attribute name="created" value="Y2xhc3M7IENTVF9OOTA4XzEwOyAyMDE4LTAzLTAxOyAxMToxMDo0NCBBTTsgMjY0NQ=="/>
+        <attribute name="edited" value="Y2xhc3M7IENTVF9OOTA4XzEwOyAyMDE4LTAzLTAxOyAxMTozNTo1MCBBTTsgMjY0OQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="height" type="Real" array="False" size="" variables="height"/>
+            <declare name="radius" type="Real" array="False" size="" variables="radius"/>
+            <output expression="&quot;enter height&quot;"/>
+            <input variable="height"/>
+            <output expression="&quot;enter radius&quot;"/>
+            <input variable="radius"/>
+            <call expression="circle(radius)"/>
+            <call expression="cylinder(height,radius)"/>
+            <call expression="sphere(height,radius)"/>
+            <call expression="cone(height,radius)"/>
+        </body>
+    </function>
+    <function name="circle" type="None" variable="">
+        <parameters>
+            <parameter name="radius" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="square" type="Real" array="False" size="" variables="square"/>
+            <assign variable="square" expression="radius*3.1415726*radius"/>
+            <output expression="&quot;circle's square = &quot;&amp; square"/>
+        </body>
+    </function>
+    <function name="cone" type="None" variable="">
+        <parameters>
+            <parameter name="height" type="Real" array="False"/>
+            <parameter name="radius" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="v" type="Real" array="False" size="" variables="v"/>
+            <assign variable="v" expression="3.1415926*radius*((radius*radius)+(height*height)^(1/2))"/>
+            <output expression="&quot;cone's area = &quot;&amp;v"/>
+        </body>
+    </function>
+    <function name="cylinder" type="None" variable="">
+        <parameters>
+            <parameter name="height" type="Real" array="False"/>
+            <parameter name="radius" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="volume" type="Real" array="False" size="" variables="volume"/>
+            <assign variable="volume" expression="(2*3.1415926*radius*radius)+(height*(2*3.1415926*radius))"/>
+            <output expression="&quot;area of cylinder =&quot;&amp; volume"/>
+        </body>
+    </function>
+    <function name="sphere" type="None" variable="">
+        <parameters>
+            <parameter name="height" type="Real" array="False"/>
+            <parameter name="radius" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="volume" type="Real" array="False" size="" variables="volume"/>
+            <assign variable="volume" expression="4*3.1415926*radius*radius"/>
+            <output expression="&quot;area of sphere =&quot;&amp; volume"/>
+        </body>
+    </function>
+</flowgorithm>

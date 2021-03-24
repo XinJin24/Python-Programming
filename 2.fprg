@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="class"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2018-03-01 11:06:44 AM"/>
+        <attribute name="created" value="Y2xhc3M7IENTVF9OOTA4XzEwOyAyMDE4LTAzLTAxOyAxMDozNDo0NyBBTTsgMjY1Mw=="/>
+        <attribute name="edited" value="Y2xhc3M7IENTVF9OOTA4XzEwOyAyMDE4LTAzLTAxOyAxMTowNjo0NCBBTTsgMjY1MA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num1" type="Real" array="False" size="" variables="num1"/>
+            <declare name="num2" type="Real" array="False" size="" variables="num2"/>
+            <output expression="&quot;enter number 1&quot;"/>
+            <input variable="num1"/>
+            <output expression="&quot;enter number 2&quot;"/>
+            <input variable="num2"/>
+            <call expression="addition(num1,num2)"/>
+            <call expression="subtraction(num1,num2)"/>
+            <call expression="division(num1,num2)"/>
+            <call expression="muliplication(num1,num2)"/>
+        </body>
+    </function>
+    <function name="addition" type="None" variable="">
+        <parameters>
+            <parameter name="num1" type="Real" array="False"/>
+            <parameter name="num2" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="add" type="Real" array="False" size="" variables="add"/>
+            <assign variable="add" expression="num1+num2"/>
+            <output expression="&quot;addition = &quot;&amp;add"/>
+        </body>
+    </function>
+    <function name="division" type="None" variable="">
+        <parameters>
+            <parameter name="num1" type="Real" array="False"/>
+            <parameter name="num2" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="div" type="Real" array="False" size="" variables="div"/>
+            <assign variable="div" expression="num1/num2"/>
+            <output expression="&quot;division= &quot;&amp;div"/>
+        </body>
+    </function>
+    <function name="muliplication" type="None" variable="">
+        <parameters>
+            <parameter name="num1" type="Real" array="False"/>
+            <parameter name="num2" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="mu" type="Real" array="False" size="" variables="mu"/>
+            <assign variable="mu" expression="num1*num2"/>
+            <output expression="&quot;muliplication = &quot;&amp; mu"/>
+        </body>
+    </function>
+    <function name="subtraction" type="None" variable="">
+        <parameters>
+            <parameter name="num1" type="Real" array="False"/>
+            <parameter name="num2" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="sub" type="Real" array="False" size="" variables="sub"/>
+            <assign variable="sub" expression="num1-num2"/>
+            <output expression="&quot;subtracion= &quot;&amp;sub"/>
+        </body>
+    </function>
+</flowgorithm>

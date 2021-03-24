@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Administrator"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2018-03-08 12:28:50 &#19978;&#21320;"/>
+        <attribute name="created" value="QWRtaW5pc3RyYXRvcjtXSU4tMjAxNjAzMjJaS0M7MjAxOC0wMy0wNzsxMDo0MTozMyDkuIvljYg7NDQ3MTE="/>
+        <attribute name="edited" value="QWRtaW5pc3RyYXRvcjtXSU4tMjAxNjAzMjJaS0M7MjAxOC0wMy0wODsxMjoyODo1MCDkuIrljYg7Mjs0NDgyNg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="radius" type="Real" array="False" size=""/>
+            <declare name="height" type="Real" array="False" size=""/>
+            <declare name="condition" type="String" array="False" size=""/>
+            <output expression="&quot;what shape you want to calculate???(cylinder,#circle,cone,sphere?)&quot;" newline="True"/>
+            <input variable="condition"/>
+            <if expression="condition=&quot;cylinder&quot;">
+                <then>
+                    <output expression="&quot;enter the radius!&quot;" newline="True"/>
+                    <input variable="radius"/>
+                    <output expression="&quot;enter the height!&quot;" newline="True"/>
+                    <input variable="height"/>
+                    <call expression="cylinder(radius,height)"/>
+                </then>
+                <else>
+                    <if expression="condition=&quot;circle&quot;">
+                        <then>
+                            <output expression="&quot;circle has no volume&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="condition=&quot;cone&quot;">
+                                <then>
+                                    <output expression="&quot;enter the radius&quot;" newline="True"/>
+                                    <input variable="radius"/>
+                                    <output expression="&quot;enter the height&quot;" newline="True"/>
+                                    <input variable="height"/>
+                                    <call expression="cone(radius,height)"/>
+                                </then>
+                                <else>
+                                    <if expression="condition=&quot;sphere&quot;">
+                                        <then>
+                                            <output expression="&quot;enter the radius&quot;" newline="True"/>
+                                            <input variable="radius"/>
+                                            <call expression="sphere(radius)"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;i do not understand what fucking words you enter, come on,bro C========3&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="cone" type="None" variable="">
+        <parameters>
+            <parameter name="radius" type="Real" array="False"/>
+            <parameter name="height" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="volume" type="Real" array="False" size=""/>
+            <assign variable="volume" expression="(((radius*radius)*3.1415926)*height)*(1/3)"/>
+            <output expression="&quot;the volume of this cone is&quot;&amp;volume" newline="True"/>
+        </body>
+    </function>
+    <function name="cylinder" type="None" variable="">
+        <parameters>
+            <parameter name="radius" type="Real" array="False"/>
+            <parameter name="height" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="volume" type="Real" array="False" size=""/>
+            <assign variable="volume" expression="((radius^2)*3.1415926)*height"/>
+            <output expression="&quot;the volume of this cylinder is &quot;&amp;volume" newline="True"/>
+        </body>
+    </function>
+    <function name="sphere" type="None" variable="">
+        <parameters>
+            <parameter name="radius" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="volume" type="Real" array="False" size=""/>
+            <assign variable="volume" expression="(3/4)*3.1415926*(radius^2)"/>
+            <output expression="&quot;the volume of this sphere is &quot;&amp;volume" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

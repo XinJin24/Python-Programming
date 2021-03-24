@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="class"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2018-03-01 10:34:28 AM"/>
+        <attribute name="created" value="Y2xhc3M7IENTVF9OOTA4XzEwOyAyMDE4LTAzLTAxOyAxMDoxNDozMSBBTTsgMjY0NA=="/>
+        <attribute name="edited" value="Y2xhc3M7IENTVF9OOTA4XzEwOyAyMDE4LTAzLTAxOyAxMDozNDoyOCBBTTsgMjY1Mg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="name2" type="String" array="False" size="" variables="name2"/>
+            <declare name="name" type="String" array="False" size="" variables="name"/>
+            <output expression="&quot;enter a name&quot;"/>
+            <input variable="name"/>
+            <call expression="song(name)"/>
+            <output expression="&quot;enter second name&quot;"/>
+            <input variable="name2"/>
+            <call expression="song(name2)"/>
+        </body>
+    </function>
+    <function name="song" type="None" variable="">
+        <parameters>
+            <parameter name="name2" type="String" array="False"/>
+        </parameters>
+        <body>
+            <output expression="&quot;happy birthday to you&quot;"/>
+            <output expression="&quot;happy birthday to you&quot;"/>
+            <output expression="&quot;happy birthday to&quot;&amp;name2"/>
+            <output expression="&quot;happy birthday to you&quot;"/>
+        </body>
+    </function>
+</flowgorithm>
